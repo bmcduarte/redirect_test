@@ -79,7 +79,7 @@
           fill="#005cde"
         />
       </svg>
-      <h1>We launched Talkdesk</h1>
+      <h1>We launched Talkdesk! Not closing window anymore!</h1>
       <p>
         Talkdesk did not launch?
         <a id="retry">Retry</a>
@@ -115,7 +115,7 @@
 
         if (window.opener) {
           window.opener.postMessage(queryString, '*')
-          window.close()
+          //window.close()
         } else {
           window.location.assign(`td+oauth2:dce_facebook_callback?${queryString}`)
         }
