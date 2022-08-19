@@ -114,15 +114,20 @@
           })
           .join('&')
 
+        alert('launch before window')
         if (window.opener) {
           window.opener.postMessage(queryString, '*')
+          alert('window.opener')
+
           //window.close()
         } else {
           window.location.assign(`td+oauth2:dce_facebook_callback?${queryString}`)
+          alert('window.else')
         }
       }
 
       launch()
+      alert('launch after')
 
       document.getElementById('retry').addEventListener('click', launch)
     </script>
